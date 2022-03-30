@@ -284,7 +284,7 @@
         p {
             font-family: 'Epilogue', sans-serif;
             color: #878787;
-            font-size: clamp(0.8em, 1em, 1.2em);
+            font-size: clamp(0.8em, 1em, 1em);
             line-height: 150%;
         }
 
@@ -295,6 +295,7 @@
             color: #F0F0F0;
             font-family: 'Epilogue', sans-serif;
             line-height: 150%;
+            font-size: clamp(0.8em, 1em, 1em);
         }
 
         .col-sm-7 {
@@ -304,6 +305,21 @@
         }
 
         @media (max-width: 575.98px) {
+            h1 {
+                font-family: 'JetBrains Mono', monospace;
+                color: #F0F0F0;
+                font-size: clamp(0.6em, 0.8em, 0.8em);
+            }
+            h2 {
+                font-family: 'JetBrains Mono', monospace;
+                color: #F0F0F0;
+                font-size: clamp(0.6em, 0.8em, 0.8em);
+            }
+            p {
+                font-family: 'Epilogue', sans-serif;
+                color: #878787;
+                font-size: clamp(0.8em, 1em, 1em);
+            }
             .col-sm-7 {
                 height: 100vh;
                 width: 100vw;
@@ -346,9 +362,10 @@
             .gif001,
             .gif002 {
                 text-align: center;
+                width: 100%;
                 height: auto;
                 overflow: hidden;
-                margin: 10%;
+                margin: 0%;
                 padding: 5%;
                 align-items: center;
             }
@@ -378,7 +395,7 @@
             h1 {
                 font-family: 'JetBrains Mono', monospace;
                 color: #F0F0F0;
-                font-size: 1.2em;
+                font-size: clamp(0.6em, 0.8em, 0.8em);
             }
             h2 {
                 font-family: 'JetBrains Mono', monospace;
@@ -388,7 +405,7 @@
             p {
                 font-family: 'Epilogue', sans-serif;
                 color: #878787;
-                font-size: 1em;
+                font-size: clamp(0.8em, 1em, 1em);
             }
             .col-sm-7 {
                 height: 100%;
