@@ -67,12 +67,13 @@
         }
 
         .click-zoom input[type=checkbox] {
-            display: none
+            display: none;
         }
 
         .click-zoom input[type=checkbox]:checked~img {
             transform: scale(2);
-            cursor: zoom-out
+            cursor: zoom-out;
+            z-index: 2;
         }
 
         .reveal {
@@ -156,15 +157,16 @@
         }
 
         .hero {
-            background-image: url(assets/img/background.jpg);
+            background-image: url(assets/img/background.png);
             background-color: #000022;
-            width: fit-content;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
             overflow: hidden;
+            padding: 0;
         }
 
         .gif001 {
@@ -286,11 +288,18 @@
             font-family: 'Epilogue', sans-serif;
         }
 
+        .col-sm-7 {
+            height: auto;
+            width: 100vw;
+            overflow: hidden;
+        }
+
         @media (max-width: 575.98px) {
-            .cyborg {
-                padding: 5%;
-                width: 100%;
-                height: auto;
+            .col-sm-7 {
+                height: 100vh;
+                width: 100vw;
+                overflow: hidden;
+                z-index: 1;
             }
             ul {
                 flex-direction: row;
@@ -301,7 +310,7 @@
             }
             .img-h {
                 width: 100%;
-                max-height: 20vh;
+                max-height: auto;
                 min-width: 0;
                 transition: transform 0.25s ease;
                 cursor: zoom-in
@@ -358,8 +367,22 @@
         }
         
         @media (max-width: 767.98px) {
-            .cyborg {
-                padding: 5%;
+            h1 {
+                font-family: 'JetBrains Mono', monospace;
+                color: #F0F0F0;
+                font-size: 1.2em;
+            }
+        
+            p {
+                font-family: 'Epilogue', sans-serif;
+                color: #878787;
+                font-size: 1em;
+            }
+            .col-sm-7 {
+                height: 100%;
+                width: 100vw;
+                overflow: hidden;
+                z-index: 1;
             }
             ul {
                 flex-direction: row;
@@ -398,17 +421,26 @@
                 padding-top: 5%;
                 padding-bottom: 5%;
             }
-            
         }
 
         // Medium devices (tablets, less than 992px)
         @media (max-width: 991.98px) {
-
+            .col-sm-7 {
+                height: 100vh;
+                width: auto;
+                overflow: hidden;
+                z-index: 1;
+            }
         }
 
         // Large devices (desktops, less than 1200px)
         @media (max-width: 1199.98px) {
-
+            .col-sm-7 {
+                height: 100vh;
+                width: auto;
+                overflow: hidden;
+                z-index: 1;
+            }
         }
 
         // X-Large devices (large desktops, less than 1400px)
@@ -428,12 +460,12 @@
                 <div class="container">
                     <a class="navbar-brand" href="#">
                         <img src="assets/img/favicon/icon.svg" alt="" width="20" height="20" class="d-inline-block align-text-top"> BTS | The glitter bomber</a>
-                        <a class="nav-link" href="mailto:pixmarshmallows@google.com"><img src="assets/img/icons/paper-plane-solid.svg" alt="" width="20" height="20" class="d-inline-block align-text-top"></a>
+                        <a class="nav-link" href="mailto:pixmarshmallows@gmail.com"><img src="assets/img/icons/paper-plane-solid.svg" alt="" width="20" height="20" class="d-inline-block align-text-top"></a>
                 </div>
             </nav>
         </div>
 
-        <div class="row hero align-items-center">
+        <div class="row align-items-center">
             <div class="col-sm-1"></div>
             <div class="col-sm-3 heroleft reveal">
                 <div class="circle reveal">
@@ -442,8 +474,11 @@
                 <h1>Hi, I'm Andr&eacute;s.</h1>
                 <p class="p-orange">A colombian graphic designer and I created this landing page to learn html 5, css 3 and bootstrap 5 using, as an excuse, a behind the scenes of this cyborg in <em>virtual clothing</em> I created with geometry nodes in Blender 3d 3.1, following the tutorial <a href="https://www.youtube.com/watch?v=MM462PzhC1I&t=1538s&ab_channel=CurtisHolt"><em>Generative Modeling Crash Course for Blender!</em></a> by Curtis Holt, and textured in Adobe Photoshop 2022.</p>
             </div>
-            <div class="col-sm-7 cyborg">
-                <img src="assets/img/hero.png" alt="Cyborg sitting on a golden chair" width="100%" height="auto">
+            <div class="col-sm-7 click-zoom hero">
+                <label>
+                    <input type="checkbox">
+                    <img src="assets/img/hero.png" alt="Cyborg sitting on a golden chair" width="100%" height="auto">
+                </label>
             </div>
         </div>
     </div>
