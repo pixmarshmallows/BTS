@@ -93,12 +93,11 @@
             0%   { transform: translateX(0); }
             50%  { transform: translateX(100px); }
             100% { transform: translateX(0); }
-		0% {
-    		transform: translateX(-100%);
-  		}
-  		100% {
-    		transform: translateX(0);
-  		}
+	}
+		
+	@keyframes bio {
+		0% {transform: translateX(-100%);}
+  		100% {transform: translateX(0);}
         }
 
         @keyframes bounce-right {
@@ -310,9 +309,16 @@
             overflow: visible;
         }
 	    
-	.col-sm-3 {
+	.bio {
 		/* This section calls the slideInFromLeft animation we defined above */
   		animation: 1s ease-out 0s 1 slideInFromLeft;
+		width:fit-content;
+           	height:fit-content;
+            	margin: 0%;
+            	padding: 1%;
+            	outline: 10px solid #F0F0F0;
+            	z-index: 1;
+            	background-color: rgba(0, 0, 34, 0.3);
 	}
 
         @media (max-width: 575.98px) {
@@ -520,7 +526,7 @@
 
         <div class="row align-items-center">
             <div class="col-sm-1"></div>
-            <div class="col-sm-3 heroleft reveal">
+            <div class="col-sm-3 bio">
                 <div class="circle reveal">
                     <img src="assets/img/picture.jpg" alt="Picture of andres" width="50%" height="auto">
                 </div>
